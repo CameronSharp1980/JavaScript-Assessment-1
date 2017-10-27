@@ -64,4 +64,14 @@ var crayola1990 = [
  * remember strings are immutable but the value of a variable can be adjusted as often as needed.
  * take advantage of the methods available on stings http://www.w3schools.com/js/js_string_methods.asp
  * there are multiple ways to do something like this but you might consider using split and join
- */ 
+ */
+
+function crayonPrep(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		arr[i] = arr[i].toLowerCase().split(' ').join('-')
+		console.log(arr[i])
+	}
+	return arr
+}
+
+console.log(crayonPrep(crayola1990))
